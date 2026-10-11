@@ -15,19 +15,19 @@ This repository is the companion project for the conference session:
 
 ```mermaid
 graph TD
-    subgraph ShopSphere Application
-        API[REST API Endpoints\n/api/orders, /api/inventory, /api/scenarios]
-        Registry[Scenario Registry]
-        BaseScenario[Scenario Engine\nBounded Pools, Timeouts, Latency Trackers]
-        JFRHelper[JFR Recording Helper\njdk.jfr.Recording]
-        Metrics[Micrometer & Actuator\n/api/metrics/summary]
+    subgraph "ShopSphere Application"
+        API["REST API Endpoints<br/>/api/orders, /api/inventory, /api/scenarios"]
+        Registry["Scenario Registry"]
+        BaseScenario["Scenario Engine<br/>Bounded Pools, Timeouts, Latency Trackers"]
+        JFRHelper["JFR Recording Helper<br/>jdk.jfr.Recording"]
+        Metrics["Micrometer & Actuator<br/>/api/metrics/summary"]
     end
 
-    subgraph Investigation & AI Workflow
-        JFRFile[Genuine JFR Binary File\nrecordings/*.jfr]
-        JMC[JDK Mission Control UI]
-        MCP[jfr-performance-mcp\n(MCP Server)]
-        Antigravity[Antigravity AI Agent\n(Pair Programmer)]
+    subgraph "Investigation & AI Workflow"
+        JFRFile["Genuine JFR Binary File<br/>recordings/*.jfr"]
+        JMC["JDK Mission Control UI"]
+        MCP["jfr-performance-mcp<br/>(MCP Server)"]
+        Antigravity["Antigravity AI Agent<br/>(Pair Programmer)"]
     end
 
     API --> Registry
