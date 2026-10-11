@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: shopsphere-demo
+  profiles:
+    default: normal
+  lifecycle:
+    timeout-per-shutdown-phase: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+shopsphere:
+  scenarios:
+    default-duration-seconds: 30
+    max-duration-seconds: 120
+    max-concurrency: 50
+    default-intensity: 10
+  recordings:
+    directory: recordings

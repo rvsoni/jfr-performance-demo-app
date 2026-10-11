@@ -1,0 +1,33 @@
+{
+  "scenarioId" : "slow-io",
+  "mode" : "FAULTY",
+  "durationSeconds" : 3,
+  "warmupSeconds" : 1,
+  "concurrency" : 4,
+  "intensity" : 100,
+  "totalRequests" : 300,
+  "successfulRequests" : 300,
+  "failedRequests" : 0,
+  "throughputRps" : 99.60159362549801,
+  "p50LatencyMs" : 40.140799,
+  "p95LatencyMs" : 40.239103,
+  "p99LatencyMs" : 40.304639,
+  "meanLatencyMs" : 40.128785,
+  "maxLatencyMs" : 40.402943,
+  "jfrRecordingFile" : "slow-io-faulty-20261010-091352.jfr",
+  "jvmVersion" : "25.0.2",
+  "jvmArguments" : [ ],
+  "timestamp" : 1791623636.919780159,
+  "customMetrics" : {
+    "status" : "IDLE",
+    "mode" : "FAULTY",
+    "activeWorkers" : 0,
+    "totalRequests" : 0,
+    "successfulRequests" : 0,
+    "failedRequests" : 0,
+    "p50Ms" : 0.0,
+    "p95Ms" : 0.0,
+    "p99Ms" : 0.0,
+    "meanMs" : 0.0
+  }
+}
